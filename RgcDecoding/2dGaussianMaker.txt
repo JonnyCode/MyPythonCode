@@ -1,0 +1,12 @@
+def 2dGaussMaker(shape,center,std): # make multidimensional gaussian 
+
+
+
+    ax = np.arange(H)-srf_center[0]
+    ay = np.arange(W)-srf_center[1]
+    xx, yy = np.meshgrid(ax, ay)
+
+    srf = np.exp(-(xx**2 + yy**2) / (2. * srf_width**2))
+    srf = srf/np.sum(srf)
+    
+    return srf   
